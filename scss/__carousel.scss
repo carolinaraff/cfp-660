@@ -1,0 +1,76 @@
+.carousel {
+    position: relative;
+    display: block;
+    width: $carousel-width;
+    height: $carousel-height;
+    margin: $margin-sections auto;
+
+    &-container {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-track {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 400ms ease-in;
+    }
+
+    &-slide {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &-text {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: $carousel-banner-width;
+            height: $carousel-banner-height;
+            background-color: $carousel-banner-color;
+            border-radius: $border-radius 0 0 0;
+            padding: $carousel-banner-padding;
+
+            p {
+                text-align: justify;
+                hyphens: auto;
+                font-size: $font-size-tiny;
+                line-height: 2;
+            }
+        }
+    }
+
+    &-nav {
+        @extend %flex1;
+        padding: $carousel-buttons-margin-padding;
+
+        .indicator {
+            width: $carousel-buttons-width-height;
+            height: $carousel-buttons-width-height;
+            border-radius: 50%;
+            background-color: $main-color;
+            margin-right: $carousel-buttons-margin-padding;
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+        }
+
+        .indicator.current-slide {
+            border: 2px solid $main-color;
+            background-color: transparent;
+        }
+    }
+}

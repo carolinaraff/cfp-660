@@ -1,0 +1,161 @@
+header {
+    position: relative;
+    @include measures(100%, 40vh);
+
+    @include respond-to(768px) {
+        @include measures(100%, 35vh);
+    }
+
+    background-color: $third-color;
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: $one-rem + .5rem;
+        z-index: 1000;
+        width: $one-rem * 2.5;
+        margin-left: $one-rem;
+
+        @include respond-to(768px) {
+            display: none;
+        }
+
+        .menu-btn__bar-1 {
+            @extend %menu-icon;
+            width: $hundred-percent;
+        }
+
+        .menu-btn__bar-2 {
+            @extend %menu-icon;
+            width: $hundred-percent - 50%;
+            transition: .5s;
+        }
+
+        .menu-btn__bar-2.translate {
+            transform: translate(100%);
+        }
+    }
+
+    .side-bar-nav {
+        position: absolute;
+        top: 0;
+        left: -70%;
+        width: 70%;
+        z-index: 999;
+        height: 100vh;
+        background-color: $background-color;
+        transition: $side-bar-transition;
+
+        @include respond-to(768px) {
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+            transition: none;
+        }
+
+        &__line {
+            border: 1px solid $main-color;
+            margin-top: $one-rem * 4;
+
+            @include respond-to(768px) {
+                display: none;
+            }
+        }
+
+        &__list {
+            height: 100%;
+            @extend %flex1;
+            flex-direction: column;
+
+            @include respond-to(768px) {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: flex-end;
+            }
+
+            &-item {
+                width: 90%;
+                background-color: $secondary-color;
+                padding: 5px;
+                border-radius: $border-radius;
+
+                &:not(:last-of-type) {
+                    margin-bottom: $one-rem * 1.5;
+                }
+
+                @include respond-to(768px) {
+                    background-color: transparent;
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4),
+                    &:nth-child(5) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                a {
+                    font-size: 15px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: $background-color;
+
+                    @include respond-to (768px) {
+                        font-size: $font-size-medium
+                    }
+
+                    // @include respond-to(900px){
+                    //     font-size: 18px;
+                    // }
+                }
+
+                &:hover>a {
+                    color: $secondary-color;
+                    transition: color .5s;
+                }
+            }
+        }
+    }
+
+    .side-bar-nav.toggle {
+        transform: translateX(100%);
+    }
+
+    .header-presentation {
+        width: $hundred-percent;
+        height: $hundred-percent;
+        @extend %flex1;
+        flex-direction: column;
+
+        @include respond-to(768px) {
+            flex-direction: row;
+            align-items: flex-start;
+            padding-top: $one-rem * 1.8;
+        }
+
+        &__logo {
+            @include measures(7.5rem, 6rem);
+
+            @include respond-to(768px) {
+                @include measures(6.5rem, 5rem);
+            }
+
+            margin-bottom: $one-rem;
+        }
+
+        h1 {
+            font-size: $one-rem + .6rem;
+
+            @include respond-to(768px) {
+                padding-top: $one-rem * 1.5;
+                padding-left: $one-rem * 0.5;
+            }
+        }
+    }
+}

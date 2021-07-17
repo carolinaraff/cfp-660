@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: $font-text;
+    font-weight: 400;
+    color: $black;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+    font-family: $font-headings;
+    color: $third-color;
+}
+
+h1 {
+    color: $background-color;
+    line-height: 1.6;
+}
+
+h2 {
+    margin-bottom: $one-rem;
+}
+
+li, a {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+}
+
+h1::first-letter, h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter, p::first-letter, a::first-letter{
+    text-transform: capitalize;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+section {
+    margin-top: $margin-sections;
+}
+
+
+@mixin respond-to ($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin respond-to__max($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin measures ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+%flex1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+%menu-icon {
+    display: block;
+    height: 3px;
+    background-color: $main-color;
+    margin-bottom: 3px * 2.5;
+    border-radius: $border-radius;
+}
+
+
+
+%arrow {
+    display: inline-block;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 25px;
+    height: 25px;
+}
+
+
+// %flex1{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// %menu-icon {
+//     height: $menu-icon-height;
+//     background-color: $main-color;
+//     margin-bottom: $menu-icon-margin-bottom;
+//     border-radius: $border-radius;
+// }
+
