@@ -1,9 +1,9 @@
 header {
     position: relative;
-    @include measures(100%, 40vh);
+    @include measures($hundred-percent, 40vh);
 
     @include respond-to(768px) {
-        @include measures(100%, 35vh);
+        @include measures($hundred-percent, 250px);
     }
 
     background-color: $third-color;
@@ -32,15 +32,15 @@ header {
         }
 
         .menu-btn__bar-2.translate {
-            transform: translate(100%);
+            transform: translate($hundred-percent);
         }
     }
 
     .side-bar-nav {
         position: absolute;
         top: 0;
-        left: -70%;
-        width: 70%;
+        left: $hundred-percent - 170%;
+        width: $hundred-percent - 30%;
         z-index: 999;
         height: 100vh;
         background-color: $background-color;
@@ -49,7 +49,7 @@ header {
         @include respond-to(768px) {
             position: absolute;
             left: 0;
-            bottom: 5px;
+            bottom: $ten-pixels - 5px;
             width: 100%;
             height: auto;
             background-color: transparent;
@@ -71,17 +71,17 @@ header {
             flex-direction: column;
 
             @include respond-to(768px) {
-                width: 100%;
+                width: $hundred-percent;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: flex-end;
             }
 
             &-item {
-                width: 90%;
+                width: $hundred-percent - 10%;
                 background-color: $secondary-color;
-                padding: 5px;
+                padding: $ten-pixels - 5px;
                 border-radius: $border-radius;
 
                 &:not(:last-of-type) {
@@ -101,7 +101,7 @@ header {
                 }
 
                 a {
-                    font-size: 15px;
+                    font-size: $ten-pixels + 5px;
                     font-weight: 600;
                     text-align: center;
                     color: $background-color;
@@ -109,10 +109,6 @@ header {
                     @include respond-to (768px) {
                         font-size: $font-size-medium
                     }
-
-                    // @include respond-to(900px){
-                    //     font-size: 18px;
-                    // }
                 }
 
                 &:hover>a {
@@ -124,7 +120,7 @@ header {
     }
 
     .side-bar-nav.toggle {
-        transform: translateX(100%);
+        transform: translateX($hundred-percent);
     }
 
     .header-presentation {
@@ -136,24 +132,22 @@ header {
         @include respond-to(768px) {
             flex-direction: row;
             align-items: flex-start;
-            padding-top: $one-rem * 1.8;
+            padding-top: $one-rem * 3;
         }
 
         &__logo {
             @include measures(7.5rem, 6rem);
-
-            @include respond-to(768px) {
-                @include measures(6.5rem, 5rem);
-            }
-
             margin-bottom: $one-rem;
+            @include respond-to(768px) {
+                margin-bottom: 0;
+            }
         }
 
         h1 {
             font-size: $one-rem + .6rem;
 
             @include respond-to(768px) {
-                padding-top: $one-rem * 1.5;
+                padding-top: $one-rem * 2;
                 padding-left: $one-rem * 0.5;
             }
         }

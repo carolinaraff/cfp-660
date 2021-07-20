@@ -16,7 +16,7 @@ body{
     font-weight: 400;
     color: $black;
     letter-spacing: 1px;
-    line-height: 1.5;
+    line-height: 2;
     word-wrap: break-word;
     background-color: $background-color;
 }
@@ -36,10 +36,13 @@ h2 {
     margin-bottom: $one-rem;
 }
 
-li, a {
+a {
     display: block;
-    list-style: none;
     text-decoration: none;
+}
+
+li{
+    list-style: none;
 }
 
 h1::first-letter, h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter, p::first-letter, a::first-letter{
@@ -52,9 +55,7 @@ button{
     cursor: pointer;
 }
 
-section {
-    margin-top: $margin-sections;
-}
+
 
 
 @mixin respond-to ($width) {
@@ -74,6 +75,18 @@ section {
     height: $height;
 }
 
+@mixin margin-top($margin-sections){
+    margin-top: $margin-sections;
+}
+
+section {
+    @include margin-top(3rem);
+
+    @include respond-to(768px) {
+        @include margin-top(5rem);
+    }
+}
+
 %flex1 {
     display: flex;
     align-items: center;
@@ -91,25 +104,4 @@ section {
 
 
 
-%arrow {
-    display: inline-block;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    width: 25px;
-    height: 25px;
-}
-
-
-// %flex1{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// %menu-icon {
-//     height: $menu-icon-height;
-//     background-color: $main-color;
-//     margin-bottom: $menu-icon-margin-bottom;
-//     border-radius: $border-radius;
-// }
 

@@ -1,9 +1,11 @@
 .carousel {
     position: relative;
     display: block;
-    width: $carousel-width;
-    height: $carousel-height;
-    margin: $margin-sections auto;
+    @include measures($hundred-percent - 5%, 200px);
+    @include respond-to(768px){
+        @include measures($hundred-percent - 30%, 365px);
+    }
+    margin: $ten-pixels * 3 auto;
 
     &-container {
         overflow: hidden;
@@ -37,11 +39,10 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: $carousel-banner-width;
-            height: $carousel-banner-height;
+            @include measures($hundred-percent - 30%, $one-rem * 5);
             background-color: $carousel-banner-color;
             border-radius: $border-radius 0 0 0;
-            padding: $carousel-banner-padding;
+            padding: $one-rem;
 
             p {
                 text-align: justify;
@@ -54,14 +55,14 @@
 
     &-nav {
         @extend %flex1;
-        padding: $carousel-buttons-margin-padding;
+        padding: $ten-pixels;
 
         .indicator {
-            width: $carousel-buttons-width-height;
-            height: $carousel-buttons-width-height;
+            width: $one-rem * 0.5;
+            height: $one-rem * 0.5;
             border-radius: 50%;
             background-color: $main-color;
-            margin-right: $carousel-buttons-margin-padding;
+            margin-right: $ten-pixels;
 
             &:last-of-type {
                 margin-right: 0px;

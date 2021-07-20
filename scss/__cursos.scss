@@ -1,67 +1,86 @@
-.cursos-container {
+.cursos{
 
-    .curso-item {
-        @extend %flex1;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 1rem;
+    &__list{
 
-        &-button {
-            width: 70%;
-            height: 45px;
-            background-color: $main-color;
-            border-radius: $border-radius;
-
-            h3 {
-                font-family: $font-text;
-                color: $background-color
+        &-item {
+            @extend %flex1;
+            flex-direction: column;
+            width: $hundred-percent;
+            margin-bottom: $one-rem;
+            @include respond-to(768px){
+                margin-bottom: $one-rem * 1.5;
             }
-        }
 
-        .curso-description {
-            width: 70%;
-            height: 0;
-            overflow: hidden;
-            overflow-y: none;
+            &__button {
+                width: $hundred-percent - 30%;
 
-            .close-button-wrapper {
-                display: flex;
-                justify-content: right;
+                @include respond-to(768px) {
+                    width: $hundred-percent - 70%;
+                }
 
-                .close-button {
-                    width: 45px;
-                    height: 45px;
+                height: $ten-pixels+35px;
+                background-color: $main-color;
+                border-radius: $border-radius;
 
-                    i {
-                        font-size: $font-size-tiny + 2px;
-                        font-weight: bold;
-                        font-style: normal;
-                        color: $main-color;
-                    }
+                h3 {
+                    font-family: $font-text;
+                    color: $background-color
                 }
             }
 
-            p {
-                font-size: $font-size-tiny + 2px;
-                text-align: justify;
-                hyphens: auto;
-                line-height: 2;
-                margin: 0rem .5rem;
-                margin-bottom: 10px;
+            &__description {
+                width: $hundred-percent - 30%;
+
+                @include respond-to(768px) {
+                    width: $hundred-percent - 70%;
+                }
+
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 1s;
+
+                .close-button-wrapper {
+                    display: flex;
+                    justify-content: right;
+
+                    .close-button {
+                        width: $ten-pixels + 35px;
+                        height: $ten-pixels + 35px;
+
+                        i {
+                            font-size: $font-size-tiny + 2px;
+                            font-weight: bold;
+                            font-style: normal;
+                            color: $main-color;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: $font-size-tiny + 2px;
+                    text-align: justify;
+                    hyphens: auto;
+                    line-height: 2;
+                    margin: 0 $one-rem * 0.5;
+                    margin-bottom: $ten-pixels;
+                }
+
+                a {
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: $font-size-tiny + 2px;
+                    color: $main-color;
+                    margin: 0 $one-rem * 0.5;
+                    border-bottom: 1px solid $main-color;
+                }
             }
 
-            a {
-                display: inline-block;
-                font-weight: bold;
-                font-size: $font-size-tiny + 2px;
-                color: $main-color;
-                margin: 0rem .5rem;
-                border-bottom: 1px solid $main-color;
+            &__description.display {
+                max-height: 400px;
             }
-        }
 
-        .curso-description.display {
-            height: auto;
         }
+        
     }
+
 }

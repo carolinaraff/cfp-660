@@ -1,0 +1,68 @@
+.encontranos{
+
+
+    h3{
+        font-family: $font-text;
+        font-weight: 400;
+        text-align: left;
+        color: black;
+        padding-left: $one-rem * 2;
+    }
+
+    &__direccion{
+        width: auto;
+        height: 80px;
+        margin: $ten-pixels 0 $ten-pixels $one-rem * 3;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    &__mail{
+        width: auto;
+        height: 80px;
+        margin-left: $one-rem * 3;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    &__icon-container {
+        display: block;
+        position: relative;
+        @include measures(3.5rem, 3.5rem);
+        border-radius: $border-radius;
+        padding: $ten-pixels - 5px;
+
+        .encontranos__icon {
+            @include measures(2.8rem, 2.8rem);
+        }
+    }
+
+    #icon-direccion{
+        background-color: $main-color;
+    }
+
+    #icon-mail{
+        background-color: $secondary-color;
+    }
+
+    &__text{
+        margin-left: $ten-pixels;
+    }
+
+    #mail-text::first-letter{
+        text-transform: lowercase;
+    }
+
+    &__mapa{
+        width: 100%;
+        height: 200px;
+        @extend %flex1;
+        margin-top: $one-rem;
+        iframe{
+            width: $hundred-percent - 10%;
+            height: $hundred-percent;
+        }
+    }
+}

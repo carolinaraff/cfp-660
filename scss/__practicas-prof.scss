@@ -1,0 +1,28 @@
+.practicas-prof{
+    [class^="practicas-prof__text"]{
+        text-align: justify;
+        padding: 0 $one-rem;
+    }
+
+    &__text-1{
+        margin-bottom: $one-rem;
+    }
+
+    &__text-2{
+        display: flex;
+        justify-content: space-between;
+        height: 400px;
+
+        .practicas-prof-aside-1{
+            width: 45%;
+        }
+
+        .practicas-prof-aside-2{
+            width: 45%;  
+            padding: $one-rem;
+            background-color: $secondary-color;
+            border-radius: $border-radius;
+            color: $background-color;
+        }
+    }
+}

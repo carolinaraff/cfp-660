@@ -1,0 +1,61 @@
+.inscripcion{
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &-boxes{
+        height: 320px;
+        
+        &__requisitos {
+            position: absolute;
+            right: 2px;
+            width: 65%;
+            height: 30%;
+            z-index: 950;
+            padding-top: $ten-pixels;
+            background-color: $secondary-color;
+            border-radius: $border-radius;
+
+            h3 {
+                font-family: $font-text;
+                font-size: $font-size-medium;
+                color: black;
+                padding-bottom: $ten-pixels - 5px;
+            }
+
+            &-list {
+                padding-left: $ten-pixels * 2;
+
+                li {
+                    font-size: $font-size-tiny;
+                    text-align: left;
+                    list-style: inside;
+
+                    &::first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+
+        &__instrucciones {
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 949;
+            width: 95%;
+            height: 60%;
+            padding: $one-rem;
+            background-color: $main-color;
+            border-radius: $border-radius;
+            @extend %flex1;
+
+            p {
+                font-size: $font-size-tiny + 2px;
+                text-align: justify;
+                color: $background-color;
+            }
+        }
+    }
+}
