@@ -1,0 +1,114 @@
+main{
+    height: auto;
+    .institucional{
+
+        h1{
+            color: $third-color;
+        }
+
+        .mision-container {
+            position: relative;
+            height: 470px;
+
+            &__titulo-box {
+                position: absolute;
+                top: 0;
+                z-index: 935;
+                right: $one-rem * 2;
+                width: 30%;
+                height: 70px;
+                background-color: $secondary-color;
+                border-radius: $border-radius;
+                @include respond-to(550px){
+                    width: 20%;
+                }
+                @include respond-to(900px) {
+                    right: $one-rem * 5;
+                }
+
+                h3 {
+                    color: black;
+                    line-height: 70px;
+                }
+            }
+
+            &__contenido-box {
+                position: absolute;
+                top: 50px;
+                right: 2.5%;
+                z-index: 930;
+                width: 95%;
+                height: 400px;
+                padding: $one-rem * 3;
+                background-color: $main-color;
+                border-radius: $border-radius;
+                overflow-y: auto;
+                @include respond-to(550px) {
+                    width: 75%;
+                    right: $one-rem * 3.5;
+                }
+                @include respond-to(900px) {
+                    width: 60%;
+                    right: $one-rem * 7;
+                }
+
+                p {
+                    text-align: justify;
+                    color: $background-color;
+                }
+            }
+        }
+
+        .historia-container{
+            position: relative;
+            height: 470px;
+            &__titulo-box{
+                position: absolute;
+                top: 0;
+                z-index: 935;
+                left: $one-rem * 2;
+                width: 25%;
+                height: 70px;
+                background-color: $secondary-color;
+                border-radius: $border-radius;
+                @include respond-to(550px) {
+                    width: 20%;
+                }
+                @include respond-to(900px){
+                    left: $one-rem * 5;
+                }
+
+                h3{
+                    color: black;
+                    line-height: 70px;
+                }
+            }
+
+            &__contenido-box{
+                position: absolute;
+                top: 55px;
+                left: 2.5%;
+                z-index: 930;
+                width: 95%;
+                height: 400px;
+                padding: $one-rem * 3;
+                background-color: $main-color;
+                border-radius: $border-radius;
+                overflow-y: auto;
+                @include respond-to(550px) {
+                    width: 75%;
+                    left: $one-rem * 3.5;
+                }
+                @include respond-to(900px) {
+                    width: 60%;
+                    left: $one-rem * 7;
+                }
+
+                p {
+                    text-align: justify;
+                    color: $background-color;
+                }
+            }
+        }
+    }
+}

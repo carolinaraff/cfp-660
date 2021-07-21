@@ -105,28 +105,53 @@ header {
                     }
                 }
 
-                &:hover>a {
+                &:hover > a {
                     color: $secondary-color;
-                    transition: color .5s;
+                    transition: color .2s;
                 }
+
             }
 
             &-item-cursos{
+                width: 100%;
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 1s;
 
                 @include respond-to(768px){
-                    display: none;
+                    position: absolute;
+                    top: 250px;
+                    left: 1%;
+                    z-index: 940;
+                    width: 25%;
+                    height: 200%;
+                    padding: 0 5px;
+                    background-color: $background-color;
+                    border: 1px solid $secondary-color;
+                    border-top: none;
+                    border-radius: 0 0 $border-radius $border-radius;
                 }
                 
                 &-li{
                     margin-bottom: $ten-pixels;
+                    @include respond-to(768px){
+                        &:first-of-type{
+                            padding-top: $ten-pixels;
+                        }
+                    }
 
                     a{
                         font-size: $font-size-tiny;
                         text-align: center;
                         color: black;
+                        @include respond-to(950px){
+                            font-size: $font-size-medium - 2px;
+                        }
+
+                        &:hover{
+                            color: $secondary-color;
+                            transition: color .2s;
+                        }
                     }
                 }
             }

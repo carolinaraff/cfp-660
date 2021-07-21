@@ -203,25 +203,50 @@ header .side-bar-nav__list-item a {
 }
 header .side-bar-nav__list-item:hover > a {
   color: #E9A438;
-  transition: color 0.5s;
+  transition: color 0.2s;
 }
 header .side-bar-nav__list-item-cursos {
+  width: 100%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s;
 }
 @media screen and (min-width: 768px) {
   header .side-bar-nav__list-item-cursos {
-    display: none;
+    position: absolute;
+    top: 250px;
+    left: 1%;
+    z-index: 940;
+    width: 25%;
+    height: 200%;
+    padding: 0 5px;
+    background-color: #F9F9F9;
+    border: 1px solid #E9A438;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
   }
 }
 header .side-bar-nav__list-item-cursos-li {
   margin-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  header .side-bar-nav__list-item-cursos-li:first-of-type {
+    padding-top: 10px;
+  }
+}
 header .side-bar-nav__list-item-cursos-li a {
   font-size: 14px;
   text-align: center;
   color: black;
+}
+@media screen and (min-width: 950px) {
+  header .side-bar-nav__list-item-cursos-li a {
+    font-size: 15px;
+  }
+}
+header .side-bar-nav__list-item-cursos-li a:hover {
+  color: #E9A438;
+  transition: color 0.2s;
 }
 header .side-bar-nav__list-item-cursos.open {
   max-height: 255px;
@@ -331,47 +356,60 @@ header .header-presentation h1 {
   background-color: transparent;
 }
 
-.banner-container .banner-grid {
+@media screen and (min-width: 768px) {
+  .banner-container-grid {
+    display: flex;
+    justify-content: center;
+  }
+}
+.banner-container-grid .banner-grid {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
   background-color: #E9A438;
 }
-.banner-container .banner-grid .item {
+@media screen and (min-width: 768px) {
+  .banner-container-grid .banner-grid {
+    width: 80%;
+    grid-column-gap: 40px;
+    border-radius: 5px;
+  }
+}
+.banner-container-grid .banner-grid .item {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
 }
 @media screen and (min-width: 768px) {
-  .banner-container .banner-grid .item {
+  .banner-container-grid .banner-grid .item {
     padding: 1rem;
   }
 }
-.banner-container .banner-grid .item .icon {
+.banner-container-grid .banner-grid .item .icon {
   width: 2.8rem;
   height: 2.8rem;
   margin: 10px 0;
 }
 @media screen and (min-width: 768px) {
-  .banner-container .banner-grid .item .icon {
+  .banner-container-grid .banner-grid .item .icon {
     width: 3.5rem;
     height: 3.5rem;
     margin: 15px 0;
   }
 }
-.banner-container .banner-grid .item p {
+.banner-container-grid .banner-grid .item p {
   text-align: center;
   font-size: 14px;
 }
 @media screen and (min-width: 768px) {
-  .banner-container .banner-grid .item p {
+  .banner-container-grid .banner-grid .item p {
     font-size: 17px;
   }
 }
 @media screen and (min-width: 768px) {
-  .banner-container .banner-grid .item .first-p {
-    width: 60%;
+  .banner-container-grid .banner-grid .item .first-p {
+    width: 90%;
   }
 }
 
@@ -654,13 +692,13 @@ header .header-presentation h1 {
 }
 @media screen and (min-width: 700px) {
   .encontranos__direccion {
-    margin: 0 auto;
+    margin: 1rem auto;
   }
 }
 .encontranos__mail {
   width: 50%;
   height: 80px;
-  margin: 0 0 1rem 3rem;
+  margin: 0 0 0 3rem;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -709,7 +747,7 @@ header .header-presentation h1 {
 .encontranos__mapa {
   width: 100%;
   height: 200px;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 .encontranos__mapa iframe {
   width: 90%;
@@ -752,6 +790,8 @@ footer .footer__grid-container {
   footer .footer__grid-container {
     width: 60%;
     top: 9rem;
+    left: 70%;
+    transform: translateX(-70%);
   }
 }
 footer .footer__grid-container .footer__grid {
@@ -763,7 +803,7 @@ footer .footer__grid-container .footer__grid {
 }
 @media screen and (min-width: 768px) {
   footer .footer__grid-container .footer__grid {
-    grid-column-gap: 60px;
+    grid-column-gap: 20px;
     padding-left: 0px;
   }
 }
@@ -834,6 +874,125 @@ footer .footer__bottom p {
   margin: 10px 0px 20px 20px;
   background-color: #E9A438;
   border-radius: 5px;
+  color: #F9F9F9;
+}
+
+main {
+  height: auto;
+}
+main .institucional h1 {
+  color: #354152;
+}
+main .institucional .mision-container {
+  position: relative;
+  height: 470px;
+}
+main .institucional .mision-container__titulo-box {
+  position: absolute;
+  top: 0;
+  z-index: 935;
+  right: 2rem;
+  width: 30%;
+  height: 70px;
+  background-color: #E9A438;
+  border-radius: 5px;
+}
+@media screen and (min-width: 550px) {
+  main .institucional .mision-container__titulo-box {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .institucional .mision-container__titulo-box {
+    right: 5rem;
+  }
+}
+main .institucional .mision-container__titulo-box h3 {
+  color: black;
+  line-height: 70px;
+}
+main .institucional .mision-container__contenido-box {
+  position: absolute;
+  top: 50px;
+  right: 2.5%;
+  z-index: 930;
+  width: 95%;
+  height: 400px;
+  padding: 3rem;
+  background-color: #65B3D6;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+@media screen and (min-width: 550px) {
+  main .institucional .mision-container__contenido-box {
+    width: 75%;
+    right: 3.5rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .institucional .mision-container__contenido-box {
+    width: 60%;
+    right: 7rem;
+  }
+}
+main .institucional .mision-container__contenido-box p {
+  text-align: justify;
+  color: #F9F9F9;
+}
+main .institucional .historia-container {
+  position: relative;
+  height: 470px;
+}
+main .institucional .historia-container__titulo-box {
+  position: absolute;
+  top: 0;
+  z-index: 935;
+  left: 2rem;
+  width: 25%;
+  height: 70px;
+  background-color: #E9A438;
+  border-radius: 5px;
+}
+@media screen and (min-width: 550px) {
+  main .institucional .historia-container__titulo-box {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .institucional .historia-container__titulo-box {
+    left: 5rem;
+  }
+}
+main .institucional .historia-container__titulo-box h3 {
+  color: black;
+  line-height: 70px;
+}
+main .institucional .historia-container__contenido-box {
+  position: absolute;
+  top: 55px;
+  left: 2.5%;
+  z-index: 930;
+  width: 95%;
+  height: 400px;
+  padding: 3rem;
+  background-color: #65B3D6;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+@media screen and (min-width: 550px) {
+  main .institucional .historia-container__contenido-box {
+    width: 75%;
+    left: 3.5rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .institucional .historia-container__contenido-box {
+    width: 60%;
+    left: 7rem;
+  }
+}
+main .institucional .historia-container__contenido-box p {
+  text-align: justify;
   color: #F9F9F9;
 }
 

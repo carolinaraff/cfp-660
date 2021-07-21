@@ -18,7 +18,8 @@ function sideBarAnimation() {
     sideBar.classList.toggle("toggle");
 }
 
-cursosBtn.addEventListener('click', () => {
+cursosBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     document.querySelector('.side-bar-nav__list-item-cursos').classList.toggle('open');
 });
 

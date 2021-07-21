@@ -30,6 +30,8 @@ footer{
         @include respond-to(768px){
             width: 60%;
             top: 9rem;
+            left: 70%;
+            transform: translateX(-70%);
         }
 
         .footer__grid{
@@ -39,7 +41,7 @@ footer{
             grid-row-gap: $ten-pixels;
             padding-left: $ten-pixels;
             @include respond-to(768px) {
-                grid-column-gap: $ten-pixels * 6;
+                grid-column-gap: $ten-pixels * 2;
                 padding-left: 0px;
             }
 

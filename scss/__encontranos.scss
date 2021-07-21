@@ -23,14 +23,14 @@
         justify-content: left;
         align-items: center;
         @include respond-to(700px){
-            margin: 0 auto;
+            margin: $one-rem auto;
         }
     }
 
     &__mail{
         width: 50%;
         height: 80px;
-        margin: 0 0 $one-rem $one-rem * 3;
+        margin: 0 0 0 $one-rem * 3;
         display: flex;
         justify-content: left;
         align-items: center;
@@ -78,7 +78,7 @@
         width: 100%;
         height: 200px;
         @extend %flex1;
-        margin-top: $one-rem;
+        margin-top: $one-rem * 3;
         iframe{
             width: $hundred-percent - 10%;
             height: $hundred-percent;
