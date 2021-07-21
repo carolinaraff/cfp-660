@@ -15,9 +15,9 @@
             position: absolute;
             right: 2px;
             width: 65%;
-            height: 30%;
+            height: 31%;
             z-index: 950;
-            padding-top: $ten-pixels;
+            padding: $ten-pixels 0;
             background-color: $secondary-color;
             border-radius: $border-radius;
             @include respond-to(500px){
@@ -41,7 +41,8 @@
             }
 
             &-list {
-                padding-left: 15%;
+                padding-left: 10%;
+                margin-bottom: $ten-pixels;
 
                 li {
                     font-size: $font-size-tiny;
@@ -65,7 +66,7 @@
 
         &__instrucciones {
             position: absolute;
-            top: 38%;
+            top: 39%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 949;
