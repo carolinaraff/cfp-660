@@ -102,6 +102,14 @@ section {
     border-radius: $border-radius;
 }
 
+%logo{
+    @include measures(7.5rem, 6rem);
+    margin-bottom: $one-rem;
+    @include respond-to(768px) {
+        margin-bottom: 0;
+    }
+}
+
 
 
 

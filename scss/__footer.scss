@@ -1,0 +1,83 @@
+footer{
+    position: relative;
+    @include measures($hundred-percent, 450px);
+    @include margin-top(3rem);
+    background-color: $third-color;
+    padding-top: $one-rem;
+    @include respond-to(768px) {
+        @include margin-top(5rem);
+        @include measures($hundred-percent, 450px);
+    }
+
+    .footer__cfp-logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        &-img{
+            @extend %logo;
+        }
+    }
+
+    .footer__grid-container{
+        position: absolute;
+        top: 8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        @include respond-to(550px){
+            width: 90%;
+        }
+        @include respond-to(768px){
+            width: 60%;
+            top: 9rem;
+        }
+
+        .footer__grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: $ten-pixels * 4;
+            grid-row-gap: $ten-pixels;
+            padding-left: $ten-pixels;
+            @include respond-to(768px) {
+                grid-column-gap: $ten-pixels * 6;
+                padding-left: 0px;
+            }
+
+            h3, a{
+                color: $background-color;
+            }
+
+            a{
+                font-size: $font-size-tiny;
+                align-self: center;
+                &:hover{
+                    color: $secondary-color;
+                }
+                @include respond-to(768px){
+                    font-size: $font-size-medium;
+                }
+            }
+
+            h3{
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+                justify-self: left;
+            }
+        }
+    }
+
+    .footer__bottom{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $secondary-color;
+        padding: 5px 0;
+        p{
+            text-align: center;
+            font-size: $font-size-tiny;
+            @include respond-to(768px){
+                font-size: $font-size-medium;
+            }
+        }
+    }
+}

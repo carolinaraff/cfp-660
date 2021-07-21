@@ -1,6 +1,7 @@
 .cursos{
 
     &__list{
+        
 
         &-item {
             @extend %flex1;
@@ -15,6 +16,10 @@
                 width: $hundred-percent - 30%;
 
                 @include respond-to(768px) {
+                    width: $hundred-percent - 50%;
+                }
+
+                @include respond-to(900px) {
                     width: $hundred-percent - 70%;
                 }
 
@@ -24,17 +29,21 @@
 
                 h3 {
                     font-family: $font-text;
-                    color: $background-color
+                    color: $background-color;
+                    @include respond-to(768px) {
+                        font-size: $font-size-medium + 2px;
+                    }
                 }
             }
 
             &__description {
                 width: $hundred-percent - 30%;
-
                 @include respond-to(768px) {
+                    width: $hundred-percent - 50%;
+                }
+                @include respond-to(900px) {
                     width: $hundred-percent - 70%;
                 }
-
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 1s;

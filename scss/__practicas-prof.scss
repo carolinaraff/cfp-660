@@ -1,28 +1,51 @@
 .practicas-prof{
-    [class^="practicas-prof__text"]{
+    width: 100%;
+    @include respond-to(768px){
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+
+    }
+
+     [class^="practicas-prof__"] {
+        @include respond-to(900px){
+            font-size: $font-size-medium + 1px;
+            line-height: 2.2;
+        }
+     }
+
+    &__text{
+        display: inline-block;
         text-align: justify;
         padding: 0 $one-rem;
-    }
-
-    &__text-1{
-        margin-bottom: $one-rem;
-    }
-
-    &__text-2{
-        display: flex;
-        justify-content: space-between;
-        height: 400px;
-
-        .practicas-prof-aside-1{
-            width: 45%;
-        }
-
-        .practicas-prof-aside-2{
-            width: 45%;  
-            padding: $one-rem;
-            background-color: $secondary-color;
-            border-radius: $border-radius;
-            color: $background-color;
+        
+        &-2{
+            padding-top: 15px;
         }
     }
+
+    &__aside {
+        width: 45%;
+        float: right;
+        padding: $one-rem;
+        margin: 20px 0px 10px 20px;
+        background-color: $secondary-color;
+        border-radius: $border-radius;
+        color: $background-color;
+        @include respond-to(768px){
+            width: 35%;
+            height: 200px;
+        }
+        @include respond-to(950px){
+            width: 35%;
+            height: 200px;
+        }
+        @include respond-to(1300px){
+            width: 35%;
+            height: 150px;
+        }
+    }
+
 }

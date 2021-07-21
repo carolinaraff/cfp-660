@@ -79,6 +79,17 @@ header .menu-btn .menu-btn__bar-2, header .menu-btn .menu-btn__bar-1 {
   border-radius: 5px;
 }
 
+footer .footer__cfp-logo-img, header .header-presentation__logo {
+  width: 7.5rem;
+  height: 6rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  footer .footer__cfp-logo-img, header .header-presentation__logo {
+    margin-bottom: 0;
+  }
+}
+
 header {
   position: relative;
   width: 100%;
@@ -204,16 +215,6 @@ header .header-presentation {
     padding-top: 3rem;
   }
 }
-header .header-presentation__logo {
-  width: 7.5rem;
-  height: 6rem;
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  header .header-presentation__logo {
-    margin-bottom: 0;
-  }
-}
 header .header-presentation h1 {
   font-size: 1.6rem;
 }
@@ -282,8 +283,8 @@ header .header-presentation h1 {
   padding: 10px;
 }
 .carousel-nav .indicator {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50%;
   background-color: #65B3D6;
   margin-right: 10px;
@@ -358,12 +359,22 @@ header .header-presentation h1 {
 }
 @media screen and (min-width: 768px) {
   .cursos__list-item__button {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .cursos__list-item__button {
     width: 30%;
   }
 }
 .cursos__list-item__button h3 {
   font-family: "Open Sans", sans-serif;
   color: #F9F9F9;
+}
+@media screen and (min-width: 768px) {
+  .cursos__list-item__button h3 {
+    font-size: 19px;
+  }
 }
 .cursos__list-item__description {
   width: 70%;
@@ -372,6 +383,11 @@ header .header-presentation h1 {
   transition: max-height 1s;
 }
 @media screen and (min-width: 768px) {
+  .cursos__list-item__description {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
   .cursos__list-item__description {
     width: 30%;
   }
@@ -415,6 +431,13 @@ header .header-presentation h1 {
   width: 100%;
   height: auto;
 }
+@media screen and (min-width: 768px) {
+  .inscripcion {
+    width: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .inscripcion-boxes {
   height: 320px;
 }
@@ -428,19 +451,47 @@ header .header-presentation h1 {
   background-color: #E9A438;
   border-radius: 5px;
 }
+@media screen and (min-width: 500px) {
+  .inscripcion-boxes__requisitos {
+    width: 45%;
+    height: 35%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .inscripcion-boxes__requisitos {
+    width: 45%;
+    right: 30px;
+    padding: 10px 0;
+  }
+}
 .inscripcion-boxes__requisitos h3 {
   font-family: "Open Sans", sans-serif;
   font-size: 17px;
   color: black;
   padding-bottom: 5px;
 }
+@media screen and (min-width: 900px) {
+  .inscripcion-boxes__requisitos h3 {
+    font-size: 18px;
+  }
+}
 .inscripcion-boxes__requisitos-list {
-  padding-left: 20px;
+  padding-left: 15%;
 }
 .inscripcion-boxes__requisitos-list li {
   font-size: 14px;
   text-align: left;
   list-style: inside;
+}
+@media screen and (min-width: 768px) {
+  .inscripcion-boxes__requisitos-list li:first-of-type {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .inscripcion-boxes__requisitos-list li {
+    font-size: 16px;
+  }
 }
 .inscripcion-boxes__requisitos-list li::first-letter {
   text-transform: capitalize;
@@ -457,57 +508,133 @@ header .header-presentation h1 {
   background-color: #65B3D6;
   border-radius: 5px;
 }
+@media screen and (min-width: 768px) {
+  .inscripcion-boxes__instrucciones {
+    top: 42%;
+    width: 90%;
+    height: 65%;
+    padding: 4rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .inscripcion-boxes__instrucciones {
+    top: 45%;
+    width: 85%;
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .inscripcion-boxes__instrucciones {
+    top: 42%;
+    width: 85%;
+    padding: 2rem 4rem;
+  }
+}
 .inscripcion-boxes__instrucciones p {
   font-size: 16px;
   text-align: justify;
   color: #F9F9F9;
 }
+@media screen and (min-width: 900px) {
+  .inscripcion-boxes__instrucciones p {
+    font-size: 19px;
+  }
+}
 
-.practicas-prof [class^=practicas-prof__text] {
+.practicas-prof {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .practicas-prof {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 900px) {
+  .practicas-prof [class^=practicas-prof__] {
+    font-size: 18px;
+    line-height: 2.2;
+  }
+}
+.practicas-prof__text {
+  display: inline-block;
   text-align: justify;
   padding: 0 1rem;
 }
-.practicas-prof__text-1 {
-  margin-bottom: 1rem;
-}
 .practicas-prof__text-2 {
-  display: flex;
-  justify-content: space-between;
-  height: 400px;
+  padding-top: 15px;
 }
-.practicas-prof__text-2 .practicas-prof-aside-1 {
+.practicas-prof__aside {
   width: 45%;
-}
-.practicas-prof__text-2 .practicas-prof-aside-2 {
-  width: 45%;
+  float: right;
   padding: 1rem;
+  margin: 20px 0px 10px 20px;
   background-color: #E9A438;
   border-radius: 5px;
   color: #F9F9F9;
 }
+@media screen and (min-width: 768px) {
+  .practicas-prof__aside {
+    width: 35%;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .practicas-prof__aside {
+    width: 35%;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .practicas-prof__aside {
+    width: 35%;
+    height: 150px;
+  }
+}
 
 .encontranos h3 {
+  display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   text-align: left;
   color: black;
-  padding-left: 2rem;
+  margin-left: 2rem;
+  border-bottom: 1px solid #65B3D6;
+}
+@media screen and (min-width: 700px) {
+  .encontranos h3 {
+    font-size: 21px;
+    margin-left: 15%;
+    margin-bottom: 1rem;
+  }
 }
 .encontranos__direccion {
-  width: auto;
+  width: 50%;
   height: 80px;
-  margin: 10px 0 10px 3rem;
+  margin: 1rem 0 1rem 3rem;
   display: flex;
   justify-content: left;
   align-items: center;
 }
+@media screen and (min-width: 700px) {
+  .encontranos__direccion {
+    margin: 0 auto;
+  }
+}
 .encontranos__mail {
-  width: auto;
+  width: 50%;
   height: 80px;
-  margin-left: 3rem;
+  margin: 0 0 1rem 3rem;
   display: flex;
   justify-content: left;
   align-items: center;
+}
+@media screen and (min-width: 700px) {
+  .encontranos__mail {
+    margin: 0 auto;
+  }
 }
 .encontranos__icon-container {
   display: block;
@@ -521,6 +648,12 @@ header .header-presentation h1 {
   width: 2.8rem;
   height: 2.8rem;
 }
+@media screen and (min-width: 700px) {
+  .encontranos__icon-container .encontranos__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .encontranos #icon-direccion {
   background-color: #65B3D6;
 }
@@ -529,6 +662,12 @@ header .header-presentation h1 {
 }
 .encontranos__text {
   margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  .encontranos__text {
+    margin-left: 30px;
+    font-size: 19px;
+  }
 }
 .encontranos #mail-text::first-letter {
   text-transform: lowercase;
@@ -541,6 +680,94 @@ header .header-presentation h1 {
 .encontranos__mapa iframe {
   width: 90%;
   height: 100%;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  margin-top: 3rem;
+  background-color: #354152;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    margin-top: 5rem;
+    width: 100%;
+    height: 450px;
+  }
+}
+footer .footer__cfp-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer .footer__grid-container {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+@media screen and (min-width: 550px) {
+  footer .footer__grid-container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .footer__grid-container {
+    width: 60%;
+    top: 9rem;
+  }
+}
+footer .footer__grid-container .footer__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 10px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer__grid-container .footer__grid {
+    grid-column-gap: 60px;
+    padding-left: 0px;
+  }
+}
+footer .footer__grid-container .footer__grid h3, footer .footer__grid-container .footer__grid a {
+  color: #F9F9F9;
+}
+footer .footer__grid-container .footer__grid a {
+  font-size: 14px;
+  align-self: center;
+}
+footer .footer__grid-container .footer__grid a:hover {
+  color: #E9A438;
+}
+@media screen and (min-width: 768px) {
+  footer .footer__grid-container .footer__grid a {
+    font-size: 17px;
+  }
+}
+footer .footer__grid-container .footer__grid h3 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  justify-self: left;
+}
+footer .footer__bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #E9A438;
+  padding: 5px 0;
+}
+footer .footer__bottom p {
+  text-align: center;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer__bottom p {
+    font-size: 17px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

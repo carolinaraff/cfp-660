@@ -1,30 +1,42 @@
 .encontranos{
 
-
     h3{
+        display: inline-block;
         font-family: $font-text;
         font-weight: 400;
         text-align: left;
         color: black;
-        padding-left: $one-rem * 2;
+        margin-left: $one-rem * 2;
+        border-bottom: 1px solid $main-color;
+        @include respond-to(700px) {
+            font-size: $font-size-medium + 4px;
+            margin-left: 15%;
+            margin-bottom: $one-rem;
+        }
     }
 
     &__direccion{
-        width: auto;
+        width: 50%;
         height: 80px;
-        margin: $ten-pixels 0 $ten-pixels $one-rem * 3;
+        margin: $one-rem 0 $one-rem $one-rem * 3;
         display: flex;
         justify-content: left;
         align-items: center;
+        @include respond-to(700px){
+            margin: 0 auto;
+        }
     }
 
     &__mail{
-        width: auto;
+        width: 50%;
         height: 80px;
-        margin-left: $one-rem * 3;
+        margin: 0 0 $one-rem $one-rem * 3;
         display: flex;
         justify-content: left;
         align-items: center;
+        @include respond-to(700px) {
+            margin: 0 auto;
+        }
     }
 
     &__icon-container {
@@ -36,6 +48,9 @@
 
         .encontranos__icon {
             @include measures(2.8rem, 2.8rem);
+            @include respond-to(700px){
+                @include measures(3rem, 3rem);
+            }
         }
     }
 
@@ -49,6 +64,10 @@
 
     &__text{
         margin-left: $ten-pixels;
+        @include respond-to(768px){
+            margin-left: $ten-pixels * 3;
+            font-size: $font-size-medium + 2px;
+        }
     }
 
     #mail-text::first-letter{

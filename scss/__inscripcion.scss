@@ -2,6 +2,11 @@
     position: relative;
     width: 100%;
     height: auto;
+    @include respond-to(768px){
+        width: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     &-boxes{
         height: 320px;
@@ -15,21 +20,41 @@
             padding-top: $ten-pixels;
             background-color: $secondary-color;
             border-radius: $border-radius;
+            @include respond-to(500px){
+                width: 45%;
+                height: 35%;
+            }
+            @include respond-to(900px) {
+                width: 45%;
+                right: $ten-pixels * 3;
+                padding: $ten-pixels 0;
+            }
 
             h3 {
                 font-family: $font-text;
                 font-size: $font-size-medium;
                 color: black;
                 padding-bottom: $ten-pixels - 5px;
+                @include respond-to(900px) {
+                    font-size: $font-size-medium + 1px;
+                }
             }
 
             &-list {
-                padding-left: $ten-pixels * 2;
+                padding-left: 15%;
 
                 li {
                     font-size: $font-size-tiny;
                     text-align: left;
                     list-style: inside;
+                    @include respond-to(768px){
+                        &:first-of-type {
+                            margin-bottom: $ten-pixels;
+                        }
+                    }
+                    @include respond-to(900px){
+                        font-size: $font-size-medium - 1px;
+                    }
 
                     &::first-letter {
                         text-transform: capitalize;
@@ -50,9 +75,28 @@
             background-color: $main-color;
             border-radius: $border-radius;
             @extend %flex1;
+            @include respond-to(768px){
+                top: 42%;
+                width: 90%;
+                height: 65%;
+                padding: $one-rem * 4;
+            }
+            @include respond-to(900px) {
+                top: 45%;
+                width: 85%;
+                padding: $one-rem * 2 $one-rem * 4;
+            }
+            @include respond-to(1080px) {
+                top: 42%;
+                width: 85%;
+                padding: $one-rem * 2 $one-rem * 4;
+            }
 
             p {
                 font-size: $font-size-tiny + 2px;
+                @include respond-to(900px) {
+                    font-size: $font-size-medium + 2px;
+                }
                 text-align: justify;
                 color: $background-color;
             }

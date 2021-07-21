@@ -1,11 +1,9 @@
 header {
     position: relative;
     @include measures($hundred-percent, 40vh);
-
     @include respond-to(768px) {
         @include measures($hundred-percent, 250px);
     }
-
     background-color: $third-color;
 
     .menu-btn {
@@ -15,7 +13,6 @@ header {
         z-index: 1000;
         width: $one-rem * 2.5;
         margin-left: $one-rem;
-
         @include respond-to(768px) {
             display: none;
         }
@@ -45,7 +42,6 @@ header {
         height: 100vh;
         background-color: $background-color;
         transition: $side-bar-transition;
-
         @include respond-to(768px) {
             position: absolute;
             left: 0;
@@ -59,7 +55,6 @@ header {
         &__line {
             border: 1px solid $main-color;
             margin-top: $one-rem * 4;
-
             @include respond-to(768px) {
                 display: none;
             }
@@ -69,7 +64,6 @@ header {
             height: 100%;
             @extend %flex1;
             flex-direction: column;
-
             @include respond-to(768px) {
                 width: $hundred-percent;
                 display: flex;
@@ -83,14 +77,11 @@ header {
                 background-color: $secondary-color;
                 padding: $ten-pixels - 5px;
                 border-radius: $border-radius;
-
                 &:not(:last-of-type) {
                     margin-bottom: $one-rem * 1.5;
                 }
-
                 @include respond-to(768px) {
                     background-color: transparent;
-
                     &:nth-child(1),
                     &:nth-child(2),
                     &:nth-child(3),
@@ -105,7 +96,6 @@ header {
                     font-weight: 600;
                     text-align: center;
                     color: $background-color;
-
                     @include respond-to (768px) {
                         font-size: $font-size-medium
                     }
@@ -136,11 +126,7 @@ header {
         }
 
         &__logo {
-            @include measures(7.5rem, 6rem);
-            margin-bottom: $one-rem;
-            @include respond-to(768px) {
-                margin-bottom: 0;
-            }
+            @extend %logo;
         }
 
         h1 {
