@@ -79,13 +79,13 @@ header .menu-btn .menu-btn__bar-2, header .menu-btn .menu-btn__bar-1 {
   border-radius: 5px;
 }
 
-footer .footer__cfp-logo-img, header .header-presentation__logo {
+footer .footer__cfp-logo-img, header .header-presentation__anchor-logo {
   width: 7.5rem;
   height: 6rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  footer .footer__cfp-logo-img, header .header-presentation__logo {
+  footer .footer__cfp-logo-img, header .header-presentation__anchor-logo {
     margin-bottom: 0;
   }
 }
@@ -214,6 +214,13 @@ header .header-presentation {
     align-items: flex-start;
     padding-top: 3rem;
   }
+}
+header .header-presentation__anchor {
+  display: inline-block;
+  cursor: pointer;
+}
+header .header-presentation__anchor-logo {
+  display: block;
 }
 header .header-presentation h1 {
   font-size: 1.6rem;

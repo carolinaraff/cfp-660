@@ -125,8 +125,13 @@ header {
             padding-top: $one-rem * 3;
         }
 
-        &__logo {
-            @extend %logo;
+        &__anchor{
+            display: inline-block;
+            cursor: pointer;
+            &-logo {
+                display: block;
+                @extend %logo;
+            }
         }
 
         h1 {
@@ -137,5 +142,6 @@ header {
                 padding-left: $one-rem * 0.5;
             }
         }
+
     }
 }
