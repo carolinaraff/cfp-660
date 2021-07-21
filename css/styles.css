@@ -770,4 +770,37 @@ footer .footer__bottom p {
   }
 }
 
+.curso-contenido {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .curso-contenido {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.curso-contenido__text {
+  display: inline-block;
+  font-size: 14px;
+  text-align: justify;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .curso-contenido__text {
+    font-size: 18px;
+  }
+}
+.curso-contenido__aside {
+  width: 40%;
+  height: auto;
+  float: right;
+  padding: 1rem;
+  margin: 10px 0px 20px 20px;
+  background-color: #E9A438;
+  border-radius: 5px;
+  color: #F9F9F9;
+}
+
 /*# sourceMappingURL=styles.css.map */

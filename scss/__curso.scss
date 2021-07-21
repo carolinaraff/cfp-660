@@ -1,0 +1,30 @@
+.curso-contenido{
+    width: 100%;
+    @include respond-to(768px) {
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__text{
+        display: inline-block;
+        font-size: $font-size-tiny;
+        text-align: justify;
+        padding: 0 $one-rem;
+        @include respond-to(768px) {
+            font-size: $font-size-medium + 1px;
+        }
+    }
+
+    &__aside{
+        width: 40%;
+        height: auto;
+        float: right;
+        padding: $one-rem;
+        margin: 10px 0px 20px 20px;
+        background-color: $secondary-color;
+        border-radius: $border-radius;
+        color: $background-color;
+    }
+}

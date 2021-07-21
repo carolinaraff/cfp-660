@@ -5,16 +5,14 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-
-
     }
 
-     [class^="practicas-prof__"] {
+    [class^="practicas-prof__"] {
         @include respond-to(900px){
             font-size: $font-size-medium + 1px;
             line-height: 2.2;
         }
-     }
+    }
 
     &__text{
         display: inline-block;
