@@ -65,7 +65,7 @@ section {
   }
 }
 
-.encontranos__mapa, .inscripcion-boxes__instrucciones, .cursos__list-item, .carousel-nav, header .header-presentation, header .side-bar-nav__list {
+.encontranos__mapa, .inscripcion-boxes__instrucciones, .cursos__list-item, .carousel-nav, header .header-presentation {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,12 +126,13 @@ header .menu-btn .menu-btn__bar-2.translate {
   transform: translate(100%);
 }
 header .side-bar-nav {
+  display: block;
   position: absolute;
   top: 0;
   left: -70%;
   width: 70%;
   z-index: 999;
-  height: 100vh;
+  height: 150vh;
   background-color: #F9F9F9;
   transition: all 0.8s cubic-bezier(0.46, 0.01, 0.32, 1);
 }
@@ -157,7 +158,11 @@ header .side-bar-nav__line {
 }
 header .side-bar-nav__list {
   height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
+  padding-top: 70px;
 }
 @media screen and (min-width: 768px) {
   header .side-bar-nav__list {
@@ -199,6 +204,28 @@ header .side-bar-nav__list-item a {
 header .side-bar-nav__list-item:hover > a {
   color: #E9A438;
   transition: color 0.5s;
+}
+header .side-bar-nav__list-item-cursos {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+@media screen and (min-width: 768px) {
+  header .side-bar-nav__list-item-cursos {
+    display: none;
+  }
+}
+header .side-bar-nav__list-item-cursos-li {
+  margin-bottom: 10px;
+}
+header .side-bar-nav__list-item-cursos-li a {
+  font-size: 14px;
+  text-align: center;
+  color: black;
+}
+header .side-bar-nav__list-item-cursos.open {
+  max-height: 255px;
+  margin-bottom: 1.5rem;
 }
 header .side-bar-nav.toggle {
   transform: translateX(100%);

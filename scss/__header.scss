@@ -34,12 +34,13 @@ header {
     }
 
     .side-bar-nav {
+        display: block;
         position: absolute;
         top: 0;
         left: $hundred-percent - 170%;
         width: $hundred-percent - 30%;
         z-index: 999;
-        height: 100vh;
+        height: 150vh;
         background-color: $background-color;
         transition: $side-bar-transition;
         @include respond-to(768px) {
@@ -62,8 +63,11 @@ header {
 
         &__list {
             height: 100%;
-            @extend %flex1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             flex-direction: column;
+            padding-top: $ten-pixels * 7;
             @include respond-to(768px) {
                 width: $hundred-percent;
                 display: flex;
@@ -106,7 +110,33 @@ header {
                     transition: color .5s;
                 }
             }
+
+            &-item-cursos{
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 1s;
+
+                @include respond-to(768px){
+                    display: none;
+                }
+                
+                &-li{
+                    margin-bottom: $ten-pixels;
+
+                    a{
+                        font-size: $font-size-tiny;
+                        text-align: center;
+                        color: black;
+                    }
+                }
+            }
+
+            &-item-cursos.open{
+                max-height: 255px;
+                margin-bottom: $one-rem * 1.5;
+            }
         }
+
     }
 
     .side-bar-nav.toggle {
