@@ -201,9 +201,11 @@ header .side-bar-nav__list-item a {
     font-size: 17px;
   }
 }
-header .side-bar-nav__list-item:hover > a {
-  color: #E9A438;
-  transition: color 0.2s;
+@media screen and (min-width: 768px) {
+  header .side-bar-nav__list-item:hover > a {
+    color: #E9A438;
+    transition: color 0.2s;
+  }
 }
 header .side-bar-nav__list-item-cursos {
   width: 100%;
@@ -517,9 +519,9 @@ header .header-presentation h1 {
   position: absolute;
   right: 2px;
   width: 65%;
-  height: 30%;
+  height: 31%;
   z-index: 950;
-  padding-top: 10px;
+  padding: 10px 0;
   background-color: #E9A438;
   border-radius: 5px;
 }
@@ -548,7 +550,8 @@ header .header-presentation h1 {
   }
 }
 .inscripcion-boxes__requisitos-list {
-  padding-left: 15%;
+  padding-left: 10%;
+  margin-bottom: 10px;
 }
 .inscripcion-boxes__requisitos-list li {
   font-size: 14px;
@@ -570,7 +573,7 @@ header .header-presentation h1 {
 }
 .inscripcion-boxes__instrucciones {
   position: absolute;
-  top: 38%;
+  top: 39%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 949;
